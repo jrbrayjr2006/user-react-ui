@@ -1,0 +1,33 @@
+name: CI-CD Workflow
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            - name: Run a one-line script
+              run: echo Hello, world! We are building the project.
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            - name: Run a one-line script
+              run: echo Hello, world! We are testing the project.
+    deploy:
+        needs: [build, test]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            - name: Run a one-line script
+              run: echo Hello, world! We are deploying the project.

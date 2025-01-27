@@ -6,12 +6,14 @@ import { useRef, useState } from "react";
 
 export default function Home() {
   const [username, setUsername] = useState('');
-  let usernameInput = useRef();
+  let usernameInput = useRef<HTMLInputElement>(null); 
   let usernameIsInvalid = false;
 
-  function handleSubmit(event) {
+  function handleSubmit(event: any) {
     event.preventDefault();
-    setUsername(usernameInput.current.value);
+    if (usernameInput.current) {
+      setUsername(usernameInput.current.value);
+    }
   }
   return (
     <main className={styles.main}>

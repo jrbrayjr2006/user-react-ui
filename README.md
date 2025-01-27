@@ -63,6 +63,10 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Containerization
 
+Build the docker image with the following command: `docker image build -t user-ui .`
+
+`docker run -p 3000:3000 user-ui`
+
 ## References
 
 - [Create a simple web application using AWS Amplify](https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/)

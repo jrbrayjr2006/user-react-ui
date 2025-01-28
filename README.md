@@ -66,6 +66,14 @@ Setup the testing environment.
 ```sh
 npm install -D jest jest-environment-jsdom @testing-library/react @testing-library/dom @testing-library/jest-dom ts-node
 
+npm install --save-dev @types/jest @babel/preset-typescript @babel/preset-env @babel/preset-react babel-jest
+
+npm install --save-dev ts-jest
+
+npm install --save-dev @jest/globals
+
+npm install --save-dev ts-node
+
 npm init jest@latest
 ```
 

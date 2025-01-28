@@ -28,7 +28,7 @@ jobs:
               run: |
                 echo We are testing the project.
                 npm install
-                npm test
+                npm run test
     deploy:
         needs: [build, test]
         runs-on: ubuntu-latest

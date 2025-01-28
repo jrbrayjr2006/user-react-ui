@@ -66,7 +66,7 @@ Setup the testing environment.
 ```sh
 npm install -D jest jest-environment-jsdom @testing-library/react @testing-library/dom @testing-library/jest-dom ts-node
 
-npm install --save-dev @types/jest @babel/preset-typescript @babel/preset-env @babel/preset-react babel-jest
+npm install --save-dev @types/jest
 
 npm install --save-dev ts-jest
 
@@ -82,6 +82,17 @@ npm init jest@latest
 Build the docker image with the following command: `docker image build -t user-ui .`
 
 `docker run -p 3000:3000 user-ui`
+
+## Troubleshooting
+
+Nextjs uses the SWC library instead of Babel.  When attempting to use Babel, the following error may occur:
+
+```cmd
+Syntax error: "next/font" requires SWC although Babel is being used due to a custom babel config being present.
+Read more: https://nextjs.org/docs/messages/babel-font-loader-conflict
+```
+
+This can be resolved by removing the `babel.config.json` and `.babelrc` files.
 
 ## References
 

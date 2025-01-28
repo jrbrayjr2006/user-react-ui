@@ -7,9 +7,9 @@ import { useRef, useState } from "react";
 export default function Home() {
   const [username, setUsername] = useState('');
   let usernameInput = useRef<HTMLInputElement>(null); 
-  let usernameIsInvalid = false;
+  let usernameIsInvalid: boolean = false;
 
-  function handleSubmit(event: any) {
+  function handleSubmit(event : React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault();
     if (usernameInput.current) {
       setUsername(usernameInput.current.value);

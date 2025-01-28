@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@babel/plugin-proposal-do-expressions": "^7.25.9",
     "foundation-sites": "^6.8.1",
     "next": "14.1.2",
     "react": "^18",

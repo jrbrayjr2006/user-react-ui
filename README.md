@@ -61,6 +61,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Testing
 
+Setup the testing environment.
+
+```sh
+npm install -D jest jest-environment-jsdom @testing-library/react @testing-library/dom @testing-library/jest-dom ts-node
+
+npm init jest@latest
+```
+
 ## Containerization
 
 Build the docker image with the following command: `docker image build -t user-ui .`

@@ -16,7 +16,7 @@ jobs:
               uses: actions/checkout@v4
             - name: Run a one-line script
               run: |
-                echo Hello, world! We are building the project.
+                echo We are building the project.
                 npm install
                 npm run build
     test:
@@ -25,7 +25,10 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v4
             - name: Run a one-line script
-              run: echo Hello, world! We are testing the project.
+              run: |
+                echo We are testing the project.
+                npm install
+                npm test
     deploy:
         needs: [build, test]
         runs-on: ubuntu-latest

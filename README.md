@@ -85,6 +85,23 @@ npm install --save-dev ts-node
 npm init jest@latest
 ```
 
+Create a `jest.config.ts` configuration file at the root of the project.
+
+```json
+const nextJest = require('next/jest')
+ 
+// Providing the path to your Next.js app which will enable loading next.config.js and .env files
+const createJestConfig = nextJest({ dir: './' })
+ 
+// Any custom config you want to pass to Jest
+const customJestConfig = {
+  setupFilesAfterEnv: ['./jest.config.ts'],
+}
+ 
+// createJestConfig is exported in this way to ensure that next/jest can load the Next.js configuration, which is async
+module.exports = createJestConfig(customJestConfig)
+```
+
 ## Containerization
 
 Build the docker image with the following command: `docker image build -t user-ui .`

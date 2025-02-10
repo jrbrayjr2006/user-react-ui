@@ -1,12 +1,11 @@
 'use client';
-import Image from "next/image";
 import {useRef, useState} from "react";
 
 export default function Home() {
   const [username, setUsername] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  let usernameInput = useRef<HTMLInputElement>(null); 
-  let usernameIsInvalid: boolean = false;
+  const usernameInput = useRef<HTMLInputElement>(null); 
+  const usernameIsInvalid: boolean = false;
 
   function handleSubmit(event : React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault();

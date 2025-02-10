@@ -59,6 +59,14 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
+## UI Dependencies
+
+Install Tailwind CSS:
+
+```sh
+npm install tailwindcss @tailwindcss/postcss postcss --save
+```
+
 ## Testing
 
 Setup the testing environment.
